@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { createUsser } from "../../firebase/Auth";
+import { createUser } from "../../firebase/Auth";
 import postit from "../../images/post-it.png";
 
 const SignUp = () => {
@@ -8,7 +8,7 @@ const SignUp = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    createUsser(email, password).then((userCredential) => {
+    createUser(email, password).then((userCredential) => {
       // Signed in
       console.log(userCredential);
       const user = userCredential.user;
